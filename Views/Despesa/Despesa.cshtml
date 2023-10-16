@@ -1,0 +1,28 @@
+﻿@page
+@model Financas.WEBMVC.Views.Despesa.DespesaModel
+@model IEnumerable<Financas.Models.Despesa>
+{
+    <h1>Despesas</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var despesa in Model)
+            {
+                <tr>
+                    <td>@despesa.Data</td>
+                    <td>@despesa.Descricao</td>
+                    <td>@despesa.Valor</td>
+                    <td>@despesa.Tipo</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

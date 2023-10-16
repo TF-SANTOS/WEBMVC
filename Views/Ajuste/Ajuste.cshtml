@@ -1,0 +1,28 @@
+﻿@page
+@model Financas.WEBMVC.Views.Ajuste.AjusteModel
+@model IEnumerable<Financas.Models.Ajuste>
+{
+<h1>Ajustes</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Tipo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ajuste in Model)
+        {
+            <tr>
+                <td>@ajuste.Data</td>
+                <td>@ajuste.Descricao</td>
+                <td>@ajuste.Valor</td>
+                <td>@ajuste.Tipo</td>
+            </tr>
+        }
+    </tbody>
+</table>
+}

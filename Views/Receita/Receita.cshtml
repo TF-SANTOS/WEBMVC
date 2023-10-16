@@ -1,0 +1,30 @@
+﻿@page
+@using Financas.WEBMVC.Views.Receita;
+
+@model IEnumerable<Financas.Models.Receita>
+    {
+
+<h1>Receitas</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Tipo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var receita in Model)
+        {
+            <tr>
+                <td>@receita.Data</td>
+                <td>@receita.Descricao</td>
+                <td>@receita.Valor</td>
+                <td>@receita.Tipo</td>
+            </tr>
+        }
+    </tbody>
+</table>
+}

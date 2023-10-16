@@ -1,0 +1,29 @@
+﻿@page
+@model Financas.WEBMVC.Views.Movimentacao.MovimentacaoModel
+@model IEnumerable<Financas.Models.Movimentacao>
+{
+
+<h1>Movimentações</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Tipo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movimentacao in Model)
+        {
+            <tr>
+                <td>@movimentacao.Data</td>
+                <td>@movimentacao.Descricao</td>
+                <td>@movimentacao.Valor</td>
+                <td>@movimentacao.Tipo</td>
+            </tr>
+        }
+    </tbody>
+</table>
+}
